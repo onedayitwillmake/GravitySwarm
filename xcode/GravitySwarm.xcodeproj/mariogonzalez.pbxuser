@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	00CFDFDF11384CC60091E310 /* ~GravitySwarmApp.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 1008}}";
+			sepNavSelRange = "{1166, 0}";
+			sepNavVisRange = "{809, 767}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* GravitySwarm */ = {
+		activeExec = 0;
+		executables = (
+			EDC9C83712EF777900857AB2 /* GravitySwarm */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = EDC9C83712EF777900857AB2 /* GravitySwarm */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* GravitySwarm */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* GravitySwarm */,
+		);
+		codeSenseManager = EDC9C84D12EF778900857AB2 /* Code sense */;
+		executables = (
+			EDC9C83712EF777900857AB2 /* GravitySwarm */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					664,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					588,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 317686051;
+			PBXWorkspaceStateSaveDate = 317686051;
+		};
+		perUserProjectItems = {
+			EDC9C88512EF7F7E00857AB2 /* PlistBookmark */ = EDC9C88512EF7F7E00857AB2 /* PlistBookmark */;
+			EDC9C89F12EF810B00857AB2 /* PBXTextBookmark */ = EDC9C89F12EF810B00857AB2 /* PBXTextBookmark */;
+			EDC9C8A012EF810B00857AB2 /* PBXTextBookmark */ = EDC9C8A012EF810B00857AB2 /* PBXTextBookmark */;
+			EDD54D8212EF825A00CCE8F6 /* PBXTextBookmark */ = EDD54D8212EF825A00CCE8F6 /* PBXTextBookmark */;
+			EDD54D8312EF825A00CCE8F6 /* PBXTextBookmark */ = EDD54D8312EF825A00CCE8F6 /* PBXTextBookmark */;
+			EDD54D8512EF825A00CCE8F6 /* PBXTextBookmark */ = EDD54D8512EF825A00CCE8F6 /* PBXTextBookmark */;
+			EDD54DB212EF8FE200CCE8F6 /* PBXTextBookmark */ = EDD54DB212EF8FE200CCE8F6 /* PBXTextBookmark */;
+			EDD54DB312EF8FE200CCE8F6 /* PBXTextBookmark */ = EDD54DB312EF8FE200CCE8F6 /* PBXTextBookmark */;
+			EDD54DB412EF8FE200CCE8F6 /* PBXTextBookmark */ = EDD54DB412EF8FE200CCE8F6 /* PBXTextBookmark */;
+		};
+		sourceControlManager = EDC9C84C12EF778900857AB2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32CA4F630368D1EE00C91783 /* GravitySwarm_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 488}}";
+			sepNavSelRange = "{322, 0}";
+			sepNavVisRange = "{0, 322}";
+		};
+	};
+	EDC9C83712EF777900857AB2 /* GravitySwarm */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = GravitySwarm;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	EDC9C84C12EF778900857AB2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	EDC9C84D12EF778900857AB2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EDC9C87012EF7ED800857AB2 /* Well.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {842, 957}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 979}";
+		};
+	};
+	EDC9C87112EF7ED800857AB2 /* Particle.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {842, 1120}}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRange = "{0, 1380}";
+		};
+	};
+	EDC9C87212EF7ED800857AB2 /* GravitySwarm.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {842, 1246}}";
+			sepNavSelRange = "{302, 0}";
+			sepNavVisRange = "{0, 1462}";
+		};
+	};
+	EDC9C87312EF7ED800857AB2 /* GravitySwarm.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {842, 4956}}";
+			sepNavSelRange = "{2021, 0}";
+			sepNavVisRange = "{26, 1932}";
+		};
+	};
+	EDC9C87712EF7EF300857AB2 /* Resources.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 493}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 356}";
+		};
+	};
+	EDC9C88512EF7F7E00857AB2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = EDC9C86412EF78D900857AB2 /* GravitySwarm-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/mariogonzalez/GIT/GravitySwarm/xcode/GravitySwarm-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	EDC9C89F12EF810B00857AB2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 00CFDFDF11384CC60091E310 /* ~GravitySwarmApp.cpp */;
+		name = "~GravitySwarmApp.cpp: 53";
+		rLen = 0;
+		rLoc = 1166;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 809;
+	};
+	EDC9C8A012EF810B00857AB2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87712EF7EF300857AB2 /* Resources.h */;
+		name = "Resources.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 356;
+		vrLoc = 0;
+	};
+	EDD54D8212EF825A00CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* GravitySwarm_Prefix.pch */;
+		name = "GravitySwarm_Prefix.pch: 15";
+		rLen = 0;
+		rLoc = 322;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 0;
+	};
+	EDD54D8312EF825A00CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87112EF7ED800857AB2 /* Particle.cpp */;
+		name = "Particle.cpp: 14";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 1380;
+		vrLoc = 0;
+	};
+	EDD54D8512EF825A00CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87312EF7ED800857AB2 /* GravitySwarm.cpp */;
+		name = "GravitySwarm.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2315;
+		vrLoc = 584;
+	};
+	EDD54DB212EF8FE200CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87212EF7ED800857AB2 /* GravitySwarm.h */;
+		name = "GravitySwarm.h: 11";
+		rLen = 0;
+		rLoc = 302;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 0;
+	};
+	EDD54DB312EF8FE200CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87012EF7ED800857AB2 /* Well.cpp */;
+		name = "Well.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 979;
+		vrLoc = 0;
+	};
+	EDD54DB412EF8FE200CCE8F6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = EDC9C87312EF7ED800857AB2 /* GravitySwarm.cpp */;
+		name = "GravitySwarm.cpp: 72";
+		rLen = 0;
+		rLoc = 2021;
+		rType = 0;
+		vrLen = 1932;
+		vrLoc = 26;
+	};
+}
