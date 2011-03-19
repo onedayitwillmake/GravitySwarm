@@ -8,10 +8,15 @@ void GravitySwarm::setup()
 	srandom( time(NULL) );
 	
 	_perlinNoise.setSeed( random() );
+<<<<<<< HEAD
 	_perlinNoiseZ = 0;
 	
 	_noiseImpact = 0.6f;
 	_noiseOffset = 0.0010;
+=======
+	_perlinNoiseZ = 3.0f;
+	_noiseOffset = 3;
+>>>>>>> cleanstart
 	
 	_state = STATE_STARTSCREEN;
 	setupOpenGL();
@@ -26,12 +31,17 @@ void GravitySwarm::startSimulation()
 	
 	gl::clear( Color( 0, 0, 0), false );
 	gl::enableAdditiveBlending();
+<<<<<<< HEAD
 	setupParticles();
+=======
+	initParticles();
+>>>>>>> cleanstart
 	
 	WellPointer well = WellPointer(new Well(getWindowCenter(), 999) );
 	_listOfWells.push_back( well );
 }
 
+<<<<<<< HEAD
 void GravitySwarm::setupParticles()
 {
 	_deadParticleCount = 0;
@@ -51,6 +61,25 @@ void GravitySwarm::setupParticles()
 		
 		// Randomly send this particle in the opposite direction to make the fireworks explosion look less uniform
 		if(Rand::randBool()) closestParticle->mVelocity *= Rand::randFloat(0.8f, 1.1f) * -1.0f;
+=======
+void GravitySwarm::initParticles()
+{	
+	// Explode from the center 
+	float arc = (2.0f * M_PI) / (float) NUM_INITIAL_PARTICLES;
+	Vec2f pos = Vec2f( SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f );
+	float maxSpeed = 15.0f;
+	for (int i = 0; i <	NUM_INITIAL_PARTICLES; i++)
+	{
+		float speed = maxSpeed + Rand::randFloat(-2.0f, 2.0f);
+		
+		_listOfParticles.push_back( Particle( pos, 1.0f ) );
+		Particle* closestParticle = &_listOfParticles.back();
+		closestParticle->mVelocity = Vec2f( cosf( (float) i * arc) * speed, sinf( (float) i * arc) * speed );
+		
+		// Randomly send this particle in the opposite direction to make the fireworks explosion look less uniform
+		if( Rand::randBool() )
+			closestParticle->mVelocity *= Rand::randFloat(0.8f, 1.1f) * -1.0f;
+>>>>>>> cleanstart
 	}
 }
 
@@ -69,13 +98,21 @@ void GravitySwarm::setupOpenGL()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glDisable( GL_LINE_SMOOTH );
+<<<<<<< HEAD
 	glLineWidth(4);
+=======
+	glLineWidth(2);
+>>>>>>> cleanstart
 	gl::setMatricesWindow(Vec2f( SCREEN_WIDTH, SCREEN_HEIGHT), true);
 }
 
 #pragma mark Touch Handling
 void GravitySwarm::touchesBegan( TouchEvent event )
 {
+<<<<<<< HEAD
+=======
+	return;
+>>>>>>> cleanstart
 	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
 	{
 		bool isTouchingAWell = false;
@@ -103,6 +140,7 @@ void GravitySwarm::touchesBegan( TouchEvent event )
 
 void GravitySwarm::touchesMoved( TouchEvent event ) 
 {
+<<<<<<< HEAD
 	//	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
 	//	{
 	//		for( vector<WellPointer>::iterator wp = _listOfWells.begin(); wp != _listOfWells.end(); ++wp)
@@ -122,11 +160,34 @@ void GravitySwarm::touchesMoved( TouchEvent event )
 	//			}
 	//		}
 	//	}
+=======
+	return;
+	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
+	{
+		for( vector<WellPointer>::iterator wp = _listOfWells.begin(); wp != _listOfWells.end(); ++wp)
+		{
+			if( (*wp)->mTouchID == touchIt->getId())
+			{
+				(*wp)->mLastTouchPosition = (*wp)->mTouchPosition;
+				(*wp)->mTouchPosition = touchIt->getPos();
+				
+				if( _windowRect.contains( (*wp)->mTouchPosition ) == false ) 
+				{
+					(*wp)->mIsDead = true;
+					break;
+				}
+				
+				break;
+			}
+		}
+	}
+>>>>>>> cleanstart
 }
 
 void GravitySwarm::touchesEnded( TouchEvent event )
 {
 	
+<<<<<<< HEAD
 	//	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
 	//	{
 	//		for(list<Well>::iterator wellIt = _listOfWells.begin(); wellIt != _listOfWells.end(); ++wellIt)
@@ -138,6 +199,21 @@ void GravitySwarm::touchesEnded( TouchEvent event )
 	//			}
 	//		}
 	//	}
+=======
+	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
+	{
+		for( vector<WellPointer>::iterator wp = _listOfWells.begin(); wp != _listOfWells.begin(); ++wp)
+		{
+//		for(list<Well>::iterator wellIt = _listOfWells.begin(); wellIt != _listOfWells.end(); ++wellIt)
+//		{
+			if((*wp)->mTouchID == touchIt->getId())
+			{
+				(*wp)->mIsDead = true;
+				break;
+			}
+		}
+	}
+>>>>>>> cleanstart
 	
 	if( _state == STATE_STARTSCREEN ) {
 		startSimulation();
@@ -168,12 +244,23 @@ void GravitySwarm::updateStartScreen()
 
 void GravitySwarm::updateParticles()
 {
+<<<<<<< HEAD
 	float TWO_PI = M_PI*2;
 	for( list<Particle>::iterator partIt = _listOfParticles.begin(); partIt != _listOfParticles.end();)
 	{
 		// You be dead. - Reset
 		if( partIt->mAge++ >= partIt->mLifespan ) {
 			partIt->reset(Vec2f( Rand::randFloat( getWindowWidth() ), Rand::randFloat( getWindowHeight() ) ) );
+=======
+	float TWO_PI = M_PI * 2;
+	float noiseForce = 0.3f;
+	float positionScale = 0.001;
+	for( list<Particle>::iterator particle = _listOfParticles.begin(); particle != _listOfParticles.end();)
+	{
+		// Reset this particle
+		if( particle->mAge++ >= particle->mLifespan ) {
+			particle->reset(Vec2f( Rand::randFloat( getWindowWidth() ), Rand::randFloat( getWindowHeight() ) ) );
+>>>>>>> cleanstart
 			continue;
 		}
 		
@@ -199,6 +286,7 @@ void GravitySwarm::updateParticles()
 		//		}
 		
 		
+<<<<<<< HEAD
 		// Add some perlin noise to the velocity
 		float noiseDownsample = 0.002;
 		
@@ -211,18 +299,57 @@ void GravitySwarm::updateParticles()
 		
 		handleEdges( &*partIt );
 		++partIt;
+=======
+		// Add some perlin noise to the 
+		Vec3f noiseSource = Vec3f( particle->mPosition.x, particle->mPosition.y, _perlinNoiseZ );
+		noiseSource *= positionScale;
+		// Retrieve noise from that position
+		Vec3f derivative = _perlinNoise.dfBm( noiseSource );
+		// Store before scaling back
+		particle->noise = derivative.z;
+		// Create movement vector
+		Vec2f secondDerivative = Vec2f( derivative.x, derivative.y );
+		secondDerivative.normalize();
+		particle->mVelocity += secondDerivative * particle->maxLinearVelocity;
+//		partIt->noise = _perlinNoise.fBm( Vec3f( partIt->mPosition.x, partIt->mPosition.y, _perlinNoiseZ ) * 0.00065f );
+		//float noiseX = partIt->mPosition.x * positionScale;
+		//float noiseY = partIt->mPosition.y * positionScale;
+//		float noiseZ = _perlinNoiseZ;
+//		partIt->noise = _perlinNoise.noise(noiseX, noiseY, noiseZ);
+		
+		// Amplify noise
+		float angle = particle->noise * TWO_PI;
+		Vec2f noiseVector( cosf( angle ) , sinf( angle ) );
+		particle->mVelocity += (noiseVector * noiseForce);
+		
+	
+		// Update and wrap
+		particle->tick();
+		handleEdges( &*particle );
+		
+		// Incriment pointer
+		++particle;
+>>>>>>> cleanstart
 	}
 }
 
 void GravitySwarm::handleEdges( Particle* partIt )
 {
 	// Bounce the particles around, or wrap around the screen
+<<<<<<< HEAD
 	float bounce = Rand::randFloat();
 	if( bounce < 1.85 ) // Wrap
 	{
 		if(partIt->mPosition.x < 0) {
 			partIt->mPosition.x = partIt->mLastPosition.x = partIt->mLastLastPosition.x = getWindowWidth() - 1;
 			
+=======
+	float bounce = -1.0f;//Rand::randFloat();
+	if( bounce < 0.5 ) // Wrap
+	{
+		if(partIt->mPosition.x < 0) {
+			partIt->mPosition.x = partIt->mLastPosition.x = partIt->mLastLastPosition.x = getWindowWidth() - 1;
+>>>>>>> cleanstart
 		}
 		else if (partIt->mPosition.x > getWindowWidth()) {
 			partIt->mPosition.x = partIt->mLastPosition.x = partIt->mLastLastPosition.x =  1; 
@@ -233,7 +360,12 @@ void GravitySwarm::handleEdges( Particle* partIt )
 		else if (partIt->mPosition.y < 0) { 
 			partIt->mPosition.y = partIt->mLastPosition.y = partIt->mLastLastPosition.y = getWindowHeight() - 1;
 		}
+<<<<<<< HEAD
 	} else // Bounce and lose some energy
+=======
+	} 
+	else // Bounce and lose some energy
+>>>>>>> cleanstart
 	{
 		float buffer = 10.0f;
 		float bounceFactor = 0.8f;
@@ -246,6 +378,10 @@ void GravitySwarm::handleEdges( Particle* partIt )
 }
 void GravitySwarm::updateWells()
 {
+<<<<<<< HEAD
+=======
+	return;
+>>>>>>> cleanstart
 	// Kill off wells over time
 	float elapsedFrames = (float) getElapsedFrames() * 0.1f;
 	
@@ -312,6 +448,7 @@ void GravitySwarm::drawSimulation()
 	gl::clear( Color( 0, 0, 0 ), false );
 	
 	// draw all the particles as lines from mPosition to mLastPosition
+<<<<<<< HEAD
 	glEnableClientState(GL_VERTEX_ARRAY);
 	for( list<Particle>::iterator partIt = _listOfParticles.begin(); partIt != _listOfParticles.end(); ++partIt )
 	{
@@ -322,6 +459,20 @@ void GravitySwarm::drawSimulation()
 		
 		Vec2f vertices[2];
 		vertices[0] = partIt->mLastLastPosition;
+=======
+	glColor4f( 1.0f, 1.0f, 1.0f, 1.0f);
+	glEnableClientState(GL_VERTEX_ARRAY);
+	for( list<Particle>::iterator partIt = _listOfParticles.begin(); partIt != _listOfParticles.end(); ++partIt )
+	{
+		//0.5f + partIt->mVelocity.x / ( SPEED * 2 ), 0.5f + partIt->mVelocity.y / ( SPEED * 2 ), 0.5f + partIt->mZ * 0.5f
+		glColor4f(0.5f + partIt->mVelocity.x / (partIt->maxLinearVelocity * 2.0f),
+				  0.5f + partIt->mVelocity.y / (partIt->maxLinearVelocity * 2.0f),
+				  0.5f + partIt->noise * 0.5f, 
+				  0.05f + partIt->mVelocity.lengthSquared() / (partIt->maxLinearVelocity*partIt->maxLinearVelocity) * 0.95f);
+		
+		Vec2f vertices[2];
+		vertices[0] = partIt->mLastPosition;
+>>>>>>> cleanstart
 		vertices[1] = partIt->mPosition;
 		glVertexPointer(2, GL_FLOAT, 0, vertices);
 		glDrawArrays(GL_LINES, 0, 2);

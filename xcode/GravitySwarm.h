@@ -42,7 +42,11 @@ class GravitySwarm : public AppCocoaTouch
 public:	
 	void	setup();
 	void	startSimulation();
+<<<<<<< HEAD
 	void	setupParticles();
+=======
+	void	initParticles();
+>>>>>>> cleanstart
 	void	setupOpenGL();
 	
 	void	touchesBegan( TouchEvent event );
@@ -77,9 +81,12 @@ public:
 	float	_noiseImpact; // how much noise effects the particles
 	float	_noiseOffset; // how fast to move the noise
 	
+<<<<<<< HEAD
 	float	_deadParticleCount;
 	float	_deadParticleMax;
 	
+=======
+>>>>>>> cleanstart
 	enum	APP_STATES { STATE_STARTSCREEN, STATE_SIMULATION };
 	int		_state;			// internal state
 };

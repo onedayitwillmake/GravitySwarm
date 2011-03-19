@@ -56,7 +56,11 @@ void GravitySwarmApp::update()
 
 void GravitySwarmApp::draw()
 {
+<<<<<<< HEAD
 	gl::clear( Color( 0.2f, 0.2f, 0.3f ) );
+=======
+	gl::clear( Color( 0.0f, 0.0f, 0.0f ) );
+>>>>>>> cleanstart
 	gl::enable( GL_TEXTURE_2D );
 	gl::enableDepthRead();
 	

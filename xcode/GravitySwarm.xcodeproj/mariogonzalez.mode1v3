@@ -276,7 +276,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+<<<<<<< HEAD
 									<integer>7</integer>
+=======
+									<integer>9</integer>
+>>>>>>> cleanstart
 									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -320,7 +324,11 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD
 								<string>Particle.cpp</string>
+=======
+								<string>GravitySwarm.cpp</string>
+>>>>>>> cleanstart
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +336,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
+<<<<<<< HEAD
 										<string>Particle.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
 										<string>EDFD9F0712F9E3E8006582A0</string>
+=======
+										<string>GravitySwarm.cpp</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>EDFD9F0012F9DB66006582A0</string>
+>>>>>>> cleanstart
 										<key>history</key>
 										<array>
 											<string>EDC9C88512EF7F7E00857AB2</string>
@@ -342,8 +358,13 @@
 											<string>EDFD9ECE12F9CDEC006582A0</string>
 											<string>EDFD9ECF12F9CDEC006582A0</string>
 											<string>EDFD9EF812F9DB0A006582A0</string>
+<<<<<<< HEAD
 											<string>EDFD9F0612F9E3E8006582A0</string>
 											<string>EDFD9EFE12F9DB66006582A0</string>
+=======
+											<string>EDFD9EFE12F9DB66006582A0</string>
+											<string>EDFD9EFF12F9DB66006582A0</string>
+>>>>>>> cleanstart
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -541,6 +562,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+<<<<<<< HEAD
+=======
+		<string>EDFD9F0112F9DB66006582A0</string>
+>>>>>>> cleanstart
 		<string>EDFD9EDE12F9CDEC006582A0</string>
 		<string>EDFD9EDF12F9CDEC006582A0</string>
 		<string>1C78EAAD065D492600B07095</string>
